@@ -9,7 +9,6 @@ const service = axios.create({
 service.interceptors.request.use((config) => {
   // 注入token
 //  this.$store.getters
-
   // store.getters.token => 请求头里面
   if (store.getters.token) {
     config.headers.Authorization = `Bearer ${store.getters.token}`
